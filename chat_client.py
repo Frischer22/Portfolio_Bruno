@@ -12,8 +12,6 @@ def recebe():
             message = client.recv(1024).decode('utf-8')
             if message == 'NICK':
                 client.send(nome.encode('utf-8'))
-            #elif(message == "/enviaarquivo"):
-             #   readfile()
             else:
                 print(message)
         except:
